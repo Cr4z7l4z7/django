@@ -1,0 +1,21 @@
+{% extends "temp_url/index2.html" %}
+
+{% block body_block %}
+
+<div class="jumbotron">
+  <h1>Please login</h1>
+
+  <form action="{% url 'temp_url:user_login' %}" method="post">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" name="username" placeholder="Input user name">
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" placeholder="Inter password">
+
+    <input type="submit" name="" value="Login">
+  </form>
+
+</div>
+
+{% endblock %}

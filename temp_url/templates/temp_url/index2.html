@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static "temp_url/css/bootstrap.min.css" %}">
+  </head>
+  <body>
+    <div class="container">
+
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+
+      <ul class="navbar-nav">
+        <li><a class="navbar-brand" href="#">Brand</a> </li>
+        <li><a class="nav-link" href="#">Base</a> </li>
+        <li><a class="nav-link" href="{% url 'temp_url:other' %}">Other</a> </li>
+        <li><a class="nav-link" href="{% url 'temp_url:register' %}">Register</a></li>
+
+        {% if user.is_authenticated %}
+        <li><a class="nav-link" href="{% url 'temp_url:user_logout' %}">Logout</a> </li>
+        {% else %}
+        <li><a class="nav-link" href="{% url 'temp_url:user_login' %}">Login</a> </li>
+        {% endif %}
+       </ul>
+    </div>
+
+    </nav>
+    <div class="container">
+
+    {% block body_block %}
+
+    {% endblock %}
+
+  </div>
+
+
+
+  </body>
+</html>
