@@ -17,9 +17,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR,'my_app/templates')
 TEMPLATE_DIR2 = os.path.join(BASE_DIR,'temp_url/templates')
 TEMPLATE_DIR3 = os.path.join(BASE_DIR,'cargo/templates')
+TEMPLATE_DIR4 = os.path.join(BASE_DIR,'classes/templates')
 STATIC_DIR = os.path.join(BASE_DIR,'my_app/static')
 STATIC_DIR2 = os.path.join(BASE_DIR,'temp_url/static')
 STATIC_DIR3 = os.path.join(BASE_DIR,'cargo/static')
+STATIC_DIR4 = os.path.join(BASE_DIR,'classes/static')
 MEDIA_DIR = os.path.join(BASE_DIR,'temp_url/media')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -36,6 +38,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'classes',
     'cargo',
     'temp_url',
     'my_app',
@@ -62,7 +65,7 @@ ROOT_URLCONF = 'my_pro.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR, TEMPLATE_DIR2, TEMPLATE_DIR2],
+        'DIRS': [TEMPLATE_DIR, TEMPLATE_DIR2, TEMPLATE_DIR2, TEMPLATE_DIR4],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -141,6 +144,7 @@ STATICFILES_DIRS = [
     STATIC_DIR,
     STATIC_DIR2,
     STATIC_DIR3,
+    STATIC_DIR4,
 ]
 
 # Media

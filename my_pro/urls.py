@@ -21,4 +21,5 @@ urlpatterns = [
     path('', include('my_app.urls')),
     path('temp_url/', include('temp_url.urls')),
     path('cargo/', include('cargo.urls')),
+    path('classes/', include('classes.urls')),
 ]

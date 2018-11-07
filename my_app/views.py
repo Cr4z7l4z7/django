@@ -33,3 +33,5 @@ def form_view(request):
             print('EMAIL: '+form.cleaned_data['email'])
             print('TEXT:  '+form.cleaned_data['text'])
     return render(request, 'my_app/form_page.html',{'form':form})
+def pixel(request):
+    return render(request, 'my_app/pixel.html')

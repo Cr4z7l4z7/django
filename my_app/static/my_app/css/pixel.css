@@ -1,0 +1,9 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbEdzBge1ZN89MWfx8r6edoGeGsm04Sgqyk3h2A8YdBM8u4b9-9A) repeat center;
+  background-size: 3px;
+}
