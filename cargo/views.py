@@ -6,3 +6,6 @@ def indexpage(request):
 
 def base(request):
     return render(request,'cargo/base.html')
+
+def car(request):
+    return render(request,'cargo/car.html')
